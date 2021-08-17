@@ -1,0 +1,41 @@
+name: Build and Publish Documentation
+
+on:
+  push:
+    branches: '*'
+  pull_request:
+    branches: '*'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag build-environment
+    - name: Cache
+      uses: actions/cache@v2.1.6
+      with:
+        path: ./build/html
+        key: $GITHUB_RUN_ID
+    - name: Build documentation using Docker
+      run: docker run --rm -v $GITHUB_WORKSPACE:/docs build-environment make clean html
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - name: Cache
+      uses: actions/cache@v2.1.6
+      with:
+        path: ./build/html
+        key: $GITHUB_RUN_ID
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2.5.0
+      with:
+        build_dir: ./build/html
+        jekyll: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
