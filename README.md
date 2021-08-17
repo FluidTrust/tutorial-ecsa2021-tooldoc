@@ -7,6 +7,6 @@ This repository contains the documentation for the tooling to be used at the tut
 ## How to build locally
 The simplest way is to use the docker image provided in this repository. Do the following steps:
 * build the builder image (`docker build -t build-environment .`)
-* run the build within a docker container (`docker run --rm -v $PWD:/docs make clean html`)
+* run the build within a docker container (`docker run --rm -v $PWD:/docs build-environment make clean html`)
 
 The build output will be located in `build/html`.
