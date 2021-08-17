@@ -2,7 +2,7 @@ name: Build and Publish Documentation
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, build ]
   pull_request:
     branches: [ main ]
 
