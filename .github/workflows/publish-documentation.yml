@@ -34,10 +34,10 @@ jobs:
         path: ./build/html
         key: $GITHUB_RUN_ID
     - name: Test
-      run: ls -la html
+      run: ls -la ./build/html
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2.5.0
       with:
-        build_dir: ./html
+        build_dir: ./build/html
         jekyll: false
 
