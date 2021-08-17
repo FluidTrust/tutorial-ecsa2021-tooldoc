@@ -68,3 +68,11 @@ html_static_path = ['_static']
 html_css_files = [
     'css/custom.css',
 ]
+
+# Enable editing on Github for every page
+html_context = {
+  'display_github': True,
+  'github_user': 'FluidTrust',
+  'github_repo': 'tutorial-ecsa2021-tooldoc',
+  'github_version': 'main/source/',
+}
