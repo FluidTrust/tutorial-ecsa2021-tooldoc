@@ -1,6 +1,6 @@
 # Tool Documentation for Tutorial at ECSA 2021
 
-![https://github.com/FluidTrust/tutorial-ecsa2021-tooldoc/actions/workflows/publish-documentation.yml?query=branch%3Amain++](https://github.com/FluidTrust/tutorial-ecsa2021-tooldoc/actions/workflows/publish-documentation.yml/badge.svg?branch=main)
+[![build status of main branch](https://github.com/FluidTrust/tutorial-ecsa2021-tooldoc/actions/workflows/publish-documentation.yml/badge.svg?branch=main)](https://github.com/FluidTrust/tutorial-ecsa2021-tooldoc/actions/workflows/publish-documentation.yml?query=branch%3Amain++)
 
 This repository contains the documentation for the tooling to be used at the tutorial at ECSA 2021. The most recent version is always available on [Github Pages](https://fluidtrust.github.io/tutorial-ecsa2021-tooldoc/).
 
