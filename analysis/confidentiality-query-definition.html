@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Confidentiality Query Definition &mdash; Palladio Confidentiality 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Confidentiality Analysis Execution" href="confidentiality-analysis-execution.html" />
+    <link rel="prev" title="Analysis" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Palladio Confidentiality
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../first-start.html">First Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">Modeling</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Analysis</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Confidentiality Query Definition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creation-of-confidentiality-query">Creation of Confidentiality Query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#syntax-of-query-definition">Syntax of Query Definition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data-selector">Data Selector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#node-selector">Node Selector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#condition">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="confidentiality-analysis-execution.html">Confidentiality Analysis Execution</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Palladio Confidentiality</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Analysis</a> &raquo;</li>
+        
+      <li>Confidentiality Query Definition</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/analysis/confidentiality-query-definition.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="confidentiality-query-definition">
+<h1>Confidentiality Query Definition<a class="headerlink" href="#confidentiality-query-definition" title="Permalink to this headline">¶</a></h1>
+<p>Confidentiality analyses are specified by queries. A query defines data flow patterns in the system that shall not occur. Detecting such a pattern means detecting a violation.</p>
+<div class="section" id="creation-of-confidentiality-query">
+<h2>Creation of Confidentiality Query<a class="headerlink" href="#creation-of-confidentiality-query" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id9" style="width: 33%">
+<span id="fig-ui-toolbar-palladio2"></span><a class="reference internal image-reference" href="../_images/palladio-toolbar.png"><img alt="Toolbar containing actions to create Palladio models" src="../_images/palladio-toolbar.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Palladio toolbar</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>In order to create a query, you can use the Palladio toolbar located in the top of the tooling window that is shown in <a class="reference internal" href="#fig-ui-toolbar-palladio2"><span class="std std-numref">Fig. 25</span></a>. To create a query, press the button containing the magnifying glass next to the data dictionary button.</p>
+<div class="figure align-right" id="id10" style="width: 33%">
+<span id="fig-querydsl-createwizard-0"></span><a class="reference internal image-reference" href="../_images/querydsl-createwizard-0.png"><img alt="Dialog for creating a query definition that asks to put in a file name ending with &quot;.DCPDSL&quot;" src="../_images/querydsl-createwizard-0.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Dialog page asking for a file name for query definition</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-right" id="id11" style="width: 33%">
+<span id="fig-querydsl-createwizard-1"></span><a class="reference internal image-reference" href="../_images/querydsl-createwizard-1.png"><img alt="Dialog for creating a query definition that asks for a data dictionary" src="../_images/querydsl-createwizard-1.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Dialog page for selecting a dictionary</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the upcoming dialog shown in <a class="reference internal" href="#fig-querydsl-createwizard-0"><span class="std std-numref">Fig. 26</span></a>, you have to select the project, into which you would like to put the query definition. The file name of the definition can be chosen freely but has to end with <code class="file docutils literal notranslate"><span class="pre">.DCPDSL</span></code>. A validation message in the top of the dialog reports if the file name is valid.</p>
+<p>After pressing <span class="guilabel">Next</span>, the dialog asks for a data dictionary as shown in <a class="reference internal" href="#fig-querydsl-createwizard-1"><span class="std std-numref">Fig. 27</span></a>. You have to select the same dictionary that you used while specifying characteristics for <a class="reference internal" href="../modeling/confidentiality-variableusages.html"><span class="doc">transmitted variables</span></a>, <a class="reference internal" href="../modeling/sirius-usage.html#specification-of-characteristics-for-usage-scenarios"><span class="std std-ref">usage scenarios</span></a> or <a class="reference internal" href="../modeling/sirius-resource.html#specification-of-characteristics-for-resource-containers"><span class="std std-ref">resource containers</span></a>. After pressing <span class="guilabel">Finish</span>, the query file will be created and an editor will be opened.</p>
+</div>
+<div class="clear-both section" id="syntax-of-query-definition">
+<h2>Syntax of Query Definition<a class="headerlink" href="#syntax-of-query-definition" title="Permalink to this headline">¶</a></h2>
+<p>We only cover a small excerpt of the full syntax. For more detailed explanations, please refer to the corresponding publications <span id="id1">[<a class="reference internal" href="#id5" title="Sebastian Hahner, Stephan Seifermann, Robert Heinrich, Maximilian Walter, Tomás Bures, and Petr Hnetynka. Modeling data flow constraints for design-time confidentiality analyses. In 18th IEEE International Conference on Software Architecture Companion, ICSA Companion 2021, Stuttgart, Germany, March 22-26, 2021, 15–21. IEEE, 2021. doi:10.1109/ICSA-C52384.2021.00009.">HSH+21</a>]</span> <span id="id2">[<a class="reference internal" href="#id6" title="Sebastian Hahner. Domain-specific language for data-driven design time analyses and result mappings for logic programs. Master's thesis, Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany, 2020. doi:10.5445/IR/1000123271.">Hah20</a>]</span>.</p>
+<p>Every query definition starts with an import of the data dictionary that has been used in specifying the software architecture. You can use relative or platform URIs to replace the <code class="docutils literal notranslate"><span class="pre">&lt;PATH&gt;</span></code> placeholder in the excerpt below. The line below gives an example on how to refer to <code class="file docutils literal notranslate"><span class="pre">dataDictionary.pddc</span></code></p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">import &lt;PATH&gt;</span>
+<span class="x">import dataDictionary.pddc</span>
+</pre></div>
+</div>
+<p>After the import, you have to specify the elements of the data dictionary that you would like to use. You do this by type statements. In a type statement, you define a name, through which you can refer to the characteristic type from the dictionary. In the following, the general syntax to introduce a <code class="docutils literal notranslate"><span class="pre">&lt;NAME&gt;</span></code> for a particular characteristic type <code class="docutils literal notranslate"><span class="pre">&lt;CT_NAME&gt;</span></code> is shown. Afterwards, an example for renaming the characteristic type <code class="docutils literal notranslate"><span class="pre">BackgroundColor</span></code> to <code class="docutils literal notranslate"><span class="pre">BGColor</span></code> is shown.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">type &lt;NAME&gt;:&lt;CT_NAME&gt;</span>
+<span class="x">type BGColor:BackgroundColor</span>
+</pre></div>
+</div>
+<p>A query is built automatically from a formulated constraint. A constraint describes a situation that shall not happen. A constraint always has a name <code class="docutils literal notranslate"><span class="pre">&lt;NAME&gt;</span></code>, a data selector <code class="docutils literal notranslate"><span class="pre">&lt;DATA_SELECOTOR&gt;</span></code>, a node selector <code class="docutils literal notranslate"><span class="pre">&lt;NODE_SELECTOR&gt;</span></code> and an optional condition <code class="docutils literal notranslate"><span class="pre">&lt;CONDITION&gt;</span></code> introduced by the <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> keyword. The general idea is to look for data, which meets the criteria of the data selector, that arrives at a node, which meets the criteria of the node selector, and report on that combination. The general syntax of a constraint is shown below.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">constraint &lt;NAME&gt; {</span>
+<span class="x">    &lt;DATA_SELECTOR&gt; NEVER FLOWS &lt;NODE_SELECTOR&gt; WHERE &lt;CONDITION&gt;</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<div class="section" id="data-selector">
+<h3>Data Selector<a class="headerlink" href="#data-selector" title="Permalink to this headline">¶</a></h3>
+<p>A data selector consists of one or multiple selection criteria based on the particular characteristics of transmitted data. The characteristics of data are derived from the characteristics specified in variable usages. If multiple criteria are given, the conjunction of all criteria has to apply. The excerpt shown below consisting of three selection criteria could be used as data selector. In all criteria a previously defined type <code class="docutils literal notranslate"><span class="pre">TYPE_NAME</span></code> is used. In the first line, we state that the data has to have the value <code class="docutils literal notranslate"><span class="pre">VALUE</span></code> of the given type applied. The following line states that the data must not have the value <code class="docutils literal notranslate"><span class="pre">VALUE</span></code> be applied. The third line introduces a variable <code class="docutils literal notranslate"><span class="pre">VAR</span></code> that represents all values that are applied to the data that match the specified type. This variable can be used in <a class="reference internal" href="#condition"><span class="std std-ref">conditions</span></a> later to test more powerfull criteria.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">data.attribute.&lt;TYPE_NAME&gt;.&lt;VALUE&gt; &amp;</span>
+<span class="linenos">2</span><span class="x">data.attribute.&lt;TYPE_NAME&gt;.!&lt;VALUE&gt; &amp;</span>
+<span class="linenos">3</span><span class="x">data.attribute.&lt;TYPE_NAME&gt;.$&lt;VAR&gt;{}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="node-selector">
+<h3>Node Selector<a class="headerlink" href="#node-selector" title="Permalink to this headline">¶</a></h3>
+<p>A node selector consists of one or multiple selection criteria based on the particular characteristics of a node. The characteristics of nodes are derived from the characteristics specified for usage scenarios or resource containers. In context of Palladio, a node is always a component. Components can be selected by characteristics using the same criteria as for data. It as possible to define multiple criteria, which all have to apply in order to get the component selected. The following excerpt visualizes the selection by a particular value (line 1) or by not having a particular value (line 2), as well as the definition of a variable that captures all values for a given type (line 3).</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">component.property.&lt;TYPE_NAME&gt;.&lt;VALUE&gt; &amp;</span>
+<span class="linenos">2</span><span class="x">component.property.&lt;TYPE_NAME&gt;.!&lt;VALUE&gt; &amp;</span>
+<span class="linenos">3</span><span class="x">component.property.&lt;TYPE_NAME&gt;.$&lt;VAR&gt;{}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="condition">
+<h3>Condition<a class="headerlink" href="#condition" title="Permalink to this headline">¶</a></h3>
+<p>The condition always yields a truth value after its evaluation against a given software architecture. If the condition evaluated to true, the constraint matched, which means that a violation has been detected.</p>
+<p>A condition consists of the operations shown in <a class="reference internal" href="#list-condition-booloperations"><span class="std std-numref">Table 2</span></a> that yield truth values and that can be connected via disjunction (<code class="docutils literal notranslate"><span class="pre">|</span></code>) or conjunction (<code class="docutils literal notranslate"><span class="pre">&amp;</span></code>). They can also be negated (<code class="docutils literal notranslate"><span class="pre">!</span></code>). A characteristic is always given as a variable name as illustrated in the examples. A set can be given as variable or as one of the set operations shown in <a class="reference internal" href="#list-condition-setoperations"><span class="std std-numref">Table 3</span></a>.</p>
+<span id="list-condition-booloperations"></span><table class="docutils align-default" id="id12">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Boolean operations available to be used in conditions</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operation</p></th>
+<th class="head"><p>Arguments</p></th>
+<th class="head"><p>Result Type</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Equality</p></td>
+<td><p>Characteristic, Characteristic</p></td>
+<td><p>Boolean</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FG_COLOR</span> <span class="pre">==</span> <span class="pre">BG_COLOR</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Inequality</p></td>
+<td><p>Characteristic, Characteristic</p></td>
+<td><p>Boolean</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FG_COLOR</span> <span class="pre">!==</span> <span class="pre">BG_COLOR</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Member Check</p></td>
+<td><p>Characteristic, Set</p></td>
+<td><p>Boolean</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">elementOf(COLOR,</span> <span class="pre">COLORS)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Empty Check</p></td>
+<td><p>Set</p></td>
+<td><p>Boolean</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isEmpty(COLORS)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<span id="list-condition-setoperations"></span><table class="docutils align-default" id="id13">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Set operations available to be used in conditions</span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operation</p></th>
+<th class="head"><p>Arguments</p></th>
+<th class="head"><p>Result Type</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Intersection</p></td>
+<td><p>Set, Set</p></td>
+<td><p>Set</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">intersection(FG_COLORS,</span> <span class="pre">BG_COLORS)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Union</p></td>
+<td><p>Set, Set</p></td>
+<td><p>Set</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">union(FG_COLORS,</span> <span class="pre">BG_COLORS)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Subtract</p></td>
+<td><p>Set, Set</p></td>
+<td><p>Set</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">subtract(FG_COLORS,</span> <span class="pre">BG_COLORS)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Set Creation</p></td>
+<td><p>Characteristic</p></td>
+<td><p>Set</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{FG_COLOR}</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id3"><dl class="citation">
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">Hah20</a></span></dt>
+<dd><p>Sebastian Hahner. Domain-specific language for data-driven design time analyses and result mappings for logic programs. Master's thesis, Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany, 2020. <a class="reference external" href="https://doi.org/10.5445/IR/1000123271">doi:10.5445/IR/1000123271</a>.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">HSH+21</a></span></dt>
+<dd><p>Sebastian Hahner, Stephan Seifermann, Robert Heinrich, Maximilian Walter, Tomás Bures, and Petr Hnetynka. Modeling data flow constraints for design-time confidentiality analyses. In <em>18th IEEE International Conference on Software Architecture Companion, ICSA Companion 2021, Stuttgart, Germany, March 22-26, 2021</em>, 15–21. IEEE, 2021. <a class="reference external" href="https://doi.org/10.1109/ICSA-C52384.2021.00009">doi:10.1109/ICSA-C52384.2021.00009</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="confidentiality-analysis-execution.html" class="btn btn-neutral float-right" title="Confidentiality Analysis Execution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Stephan Seifermann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

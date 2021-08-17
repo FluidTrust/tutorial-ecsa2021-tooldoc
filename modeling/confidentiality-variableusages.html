@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Defining Variable Usages for Confidentiality &mdash; Palladio Confidentiality 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Analysis" href="../analysis/index.html" />
+    <link rel="prev" title="Specifying a Data Dictionary" href="xtext-datadictionary.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Palladio Confidentiality
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../first-start.html">First Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sirius-fundamentals.html">Usage of Graphical Editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-repository.html">Usage of Repository Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-seff.html">Usage of SEFF Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-assembly.html">Usage of Assembly Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-resource.html">Usage of Resource Environment Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-allocation.html">Usage of Allocation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-usage.html">Usage of Usage Model Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xtext-datadictionary.html">Specifying a Data Dictionary</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Defining Variable Usages for Confidentiality</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-of-characterizations">Creation of Characterizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-existing-characterizations">Editing Existing Characterizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-support-of-editor">Editing Support of Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#syntax-of-assignments">Syntax of Assignments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Palladio Confidentiality</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Modeling</a> &raquo;</li>
+        
+      <li>Defining Variable Usages for Confidentiality</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modeling/confidentiality-variableusages.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="defining-variable-usages-for-confidentiality">
+<h1>Defining Variable Usages for Confidentiality<a class="headerlink" href="#defining-variable-usages-for-confidentiality" title="Permalink to this headline">¶</a></h1>
+<p>Variable usages allow to define characteristics of variables, which can essentially be parameters and return values. The types of characteristics, which can be used, are given by a <a class="reference internal" href="xtext-datadictionary.html"><span class="doc">data dictionary</span></a>. The specification of characteristics is done by <em class="dfn">assignments</em>.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>In order to specify variable usages that can be used to reason about confidentiality, a <a class="reference internal" href="xtext-datadictionary.html"><span class="doc">data dictionary</span></a> has to exist and contain characteristic types. This is essentially because the characteristics are typed by the characteristic types in the data dictionary.</p>
+<p>It is also necessary that the action holding the variable usage is already part of a control or usage flow. This means, the action has to be connected by the flow edges. Otherwise, determining the parameters and return values that can be used is not possible.</p>
+</div>
+<div class="section" id="creation-of-characterizations">
+<h2>Creation of Characterizations<a class="headerlink" href="#creation-of-characterizations" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id1" style="width: 20%">
+<span id="fig-sirius-variablecharacterization-confidentiality"></span><a class="reference internal image-reference" href="../_images/sirius-variablecharacterization-confidentiality.png"><img alt="Confidentiality Variable Characterization tool in the editor palette" src="../_images/sirius-variablecharacterization-confidentiality.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Tool to create variable characterizations for confidentiality</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-right" id="id2" style="width: 33%">
+<span id="fig-sirius-variablecharacterization-confidentiality-assignmentsdialog"></span><a class="reference internal image-reference" href="../_images/sirius-variablecharacterization-confidentiality-assignmentsdialog.png"><img alt="Editing dialog that contains an assignment, which can be edited" src="../_images/sirius-variablecharacterization-confidentiality-assignmentsdialog.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Dialog to edit assignments</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>A characterization is a sequence of assignments. To create such an assignment, you have to select the tool <span class="guilabel">Confidentiality Variable Characterisation</span> shown in <a class="reference internal" href="#fig-sirius-variablecharacterization-confidentiality"><span class="std std-numref">Fig. 21</span></a> from the palette and click into the corresponding variable usage. Afterwards, the dialog shown in <a class="reference internal" href="#fig-sirius-variablecharacterization-confidentiality-assignmentsdialog"><span class="std std-numref">Fig. 22</span></a> opens and you can write a sequence of assignments. The assignments have to follow the  <a class="reference internal" href="#syntax-of-assignments"><span class="std std-ref">syntax</span></a> described later. After you confirm the dialog, the assignments will be created and shown within the variable usage in the graphical editor.</p>
+</div>
+<div class="clear-both section" id="editing-existing-characterizations">
+<h2>Editing Existing Characterizations<a class="headerlink" href="#editing-existing-characterizations" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id3" style="width: 33%">
+<span id="fig-sirius-propertiesview-assignments"></span><a class="reference internal image-reference" href="../_images/properties-view-assignments.png"><img alt="Properties view with selected tab for editing assignments" src="../_images/properties-view-assignments.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Properties view allowing to edit assignments</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>To edit existing characterizations, you have to use the properties view. First, select any assignment within the variable usage. After that, select the <span class="guilabel">Assignments</span> tab in the properties view that is also shown in <a class="reference internal" href="#fig-sirius-propertiesview-assignments"><span class="std std-numref">Fig. 23</span></a>. After pressing the <span class="guilabel">Edit</span> button, the dialog already known from creating the assignments (<a class="reference internal" href="#fig-sirius-variablecharacterization-confidentiality-assignmentsdialog"><span class="std std-numref">Fig. 22</span></a>) appears and you can edit the assignments. After confirming the dialog, all assignments are replaced by the assignments that you just specified in the dialog.</p>
+</div>
+<div class="clear-both section" id="editing-support-of-editor">
+<h2>Editing Support of Editor<a class="headerlink" href="#editing-support-of-editor" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id4" style="width: 33%">
+<span id="fig-sirius-variablecharacterization-confidentiality-assignmentsdialog-editingsupport"></span><a class="reference internal image-reference" href="../_images/sirius-variablecharacterization-confidentiality-assignmentsdialog-editingsupport.png"><img alt="Visualization of code completion proposals and validation messages in editing dialog." src="../_images/sirius-variablecharacterization-confidentiality-assignmentsdialog-editingsupport.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Editing support in assignments editor</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>The dialog provides editing support by code completion proposals and validation messages as shown in <a class="reference internal" href="#fig-sirius-variablecharacterization-confidentiality-assignmentsdialog-editingsupport"><span class="std std-numref">Fig. 24</span></a>.</p>
+<p>The code completion proposals suggest keywords as well as elements that can be referenced. These suggestions only work if the action that contains the variable usage and therefore also the assignments is correctly integrated into the usage or control flow.</p>
+</div>
+<div class="clear-both section" id="syntax-of-assignments">
+<h2>Syntax of Assignments<a class="headerlink" href="#syntax-of-assignments" title="Permalink to this headline">¶</a></h2>
+<p>Assignments assign truth values to triples of variable, characteristic type and value. If the value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the given value of the given characteristic type is available on the variable. If there is no assignment for a triple or the truth value is <code class="docutils literal notranslate"><span class="pre">false</span></code>, the given value of the given characteristic type is not available on the variable. If there are multiple assignments to the same triple, only the last assignment is effective.</p>
+<p>The syntax of an assignment is <code class="docutils literal notranslate"><span class="pre">variable.characteristicType.value</span> <span class="pre">:=</span> <span class="pre">Term</span></code>, where <code class="docutils literal notranslate"><span class="pre">Term</span></code> is a term that yields a truth value. The <code class="docutils literal notranslate"><span class="pre">variable</span></code> is always the variable defined by the variable usage. The <code class="docutils literal notranslate"><span class="pre">characteristicType</span></code> is one particular characteristic type from the <a class="reference internal" href="xtext-datadictionary.html"><span class="doc">data dictionary</span></a>. The <code class="docutils literal notranslate"><span class="pre">value</span></code> is one value from the enumeration that defined the value range of the characteristic type. The supported types of terms are given in <a class="reference internal" href="#table-assignments-terms"><span class="std std-numref">Table 1</span></a>.</p>
+<span id="table-assignments-terms"></span><table class="colwidths-given docutils align-default" id="id5">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Usable types of terms</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Term Type</p></th>
+<th class="head"><p>Syntax</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Constant</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>Constant</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>Negation</p></td>
+<td><p>!Term</p></td>
+<td><p>!false</p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Logic</p></td>
+<td><p>Term &amp; Term</p></td>
+<td><p>false &amp; true</p></td>
+</tr>
+<tr class="row-even"><td><p>Binary Logic</p></td>
+<td><p>Term | Term</p></td>
+<td><p>false | true</p></td>
+</tr>
+<tr class="row-odd"><td><p>Characteristic Reference</p></td>
+<td><p>variable.characteristicType.value</p></td>
+<td><p>RETURN.color.red</p></td>
+</tr>
+</tbody>
+</table>
+<p>A characteristic reference on the right hand side of the assignment can refer to available variables. Such variables typically are parameters or return values. By referring to other variables, the assignments specify a propagation of characteristics.</p>
+<p>To simplify specifications, it is possible to omit the characteristic type and the value from characteristic references on the left hand side als well as on the right hand side of an assignment. To omit an element, you can add an asterisk <code class="docutils literal notranslate"><span class="pre">*</span></code> in the particular location. Please note that if you omit the characteristic type you also have to omit the value. Additionally, you can only omit elements on the right hand side of an assignment if you also omitted these elements on the left hand side of the assignment.</p>
+<p>Assignments containing omissions will be instantiated with appropriate values during runtime. If you omit a value but specify a characteristic type having <span class="math notranslate nohighlight">\(n\)</span> values, there will be virtually <span class="math notranslate nohighlight">\(n\)</span> assignments. In assignment <span class="math notranslate nohighlight">\(i\)</span> for <span class="math notranslate nohighlight">\(0 \leqslant i &lt; n\)</span> there will be the value with index <span class="math notranslate nohighlight">\(i\)</span> be inserted in all places, in which a value has been omitted. If the characteritic type and the value have been omitted, there will be an assignment for every tuple of characteristic type and values of this characteristic type.</p>
+<p>To illustrate the effect of omissions, let’s assume there are the two characteristic types <code class="docutils literal notranslate"><span class="pre">ForegroundColor</span></code> and <code class="docutils literal notranslate"><span class="pre">BackgroundColor</span></code>, which use the same enumeration specifying the colors <code class="docutils literal notranslate"><span class="pre">Red</span></code>, <code class="docutils literal notranslate"><span class="pre">Blue</span></code> and <code class="docutils literal notranslate"><span class="pre">Green</span></code>. We specify the variable <code class="docutils literal notranslate"><span class="pre">out</span></code> and can refer to a variable <code class="docutils literal notranslate"><span class="pre">in</span></code>. The following examples show how omissions are handled for this particular example.</p>
+<p>If you only omit the value, you have to ensure that the used characteristic types have compatible value ranges. The value ranges are compatible, if the characteristic types refer to the same enumeration. This implies that the value ranges are the same. The meaning of the following example is that the foreground color of the output variable shall have the background color of the input variable.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>out.ForegroundColor.<span class="ge">* := in.BackgroundColor.*</span>
+</pre></div>
+</div>
+<p>becomes</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>out.ForegroundColor.Red := in.BackgroundColor.Red
+out.ForegroundColor.Blue := in.BackgroundColor.Blue
+out.ForegroundColor.Green := in.BackgroundColor.Green
+</pre></div>
+</div>
+<p>If you omit the characteristic type and the value on the left hand side of the assignment, you either have to omit both on the right hand side of the assignment or specify both. In the following example, the output variable shall have exactly the same characteristics as the input variable but only if the foreground color of the input variable is red.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>out.<span class="ge">*.*</span> := in.<span class="ge">*.*</span> &amp; in.Foreground.Red
+</pre></div>
+</div>
+<p>becomes</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>out.ForegroundColor.Red := in.ForegroundColor.Red &amp; in.Foreground.Red
+out.ForegroundColor.Blue := in.ForegroundColor.Blue &amp; in.Foreground.Red
+out.ForegroundColor.Green := in.ForegroundColor.Green &amp; in.Foreground.Red
+out.BackgroundColor.Red := in.BackgroundColor.Red &amp; in.Foreground.Red
+out.BackgroundColor.Blue := in.BackgroundColor.Blue &amp; in.Foreground.Red
+out.BackgroundColor.Green := in.BackgroundColor.Green &amp; in.Foreground.Red
+</pre></div>
+</div>
+<p>If you specify multiple assignments for the same variable (as shown in the example before), you have to use a simplified syntax. In case of the example shown before, the correct syntax would have to be like in the following excerpt.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>out. {
+  ForegroundColor.Red := in.ForegroundColor.Red &amp; in.Foreground.Red
+  ForegroundColor.Blue := in.ForegroundColor.Blue &amp; in.Foreground.Red
+  ForegroundColor.Green := in.ForegroundColor.Green &amp; in.Foreground.Red
+  BackgroundColor.Red := in.BackgroundColor.Red &amp; in.Foreground.Red
+  BackgroundColor.Blue := in.BackgroundColor.Blue &amp; in.Foreground.Red
+  BackgroundColor.Green := in.BackgroundColor.Green &amp; in.Foreground.Red
+}
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../analysis/index.html" class="btn btn-neutral float-right" title="Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="xtext-datadictionary.html" class="btn btn-neutral float-left" title="Specifying a Data Dictionary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Stephan Seifermann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

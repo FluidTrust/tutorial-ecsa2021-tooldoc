@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Usage of SEFF Editor &mdash; Palladio Confidentiality 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Usage of Assembly Editor" href="sirius-assembly.html" />
+    <link rel="prev" title="Usage of Repository Editor" href="sirius-repository.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Palladio Confidentiality
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../first-start.html">First Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sirius-fundamentals.html">Usage of Graphical Editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-repository.html">Usage of Repository Editor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Usage of SEFF Editor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#contents-of-editor">Contents of Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#specification-of-actions">Specification of Actions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#external-call-action">External Call Action</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-variable-action">Set Variable Action</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-assembly.html">Usage of Assembly Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-resource.html">Usage of Resource Environment Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-allocation.html">Usage of Allocation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sirius-usage.html">Usage of Usage Model Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xtext-datadictionary.html">Specifying a Data Dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="confidentiality-variableusages.html">Defining Variable Usages for Confidentiality</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Palladio Confidentiality</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Modeling</a> &raquo;</li>
+        
+      <li>Usage of SEFF Editor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modeling/sirius-seff.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usage-of-seff-editor">
+<h1>Usage of SEFF Editor<a class="headerlink" href="#usage-of-seff-editor" title="Permalink to this headline">¶</a></h1>
+<p>The SEFF editor allows specifying the effect on aspects relevant for particular quality predictions for a particular service provided by a component. You can open the SEFF editor from within the <a class="reference internal" href="sirius-repository.html#opening-the-seff-editor"><span class="std std-ref">Repository editor</span></a>.</p>
+<div class="section" id="contents-of-editor">
+<h2>Contents of Editor<a class="headerlink" href="#contents-of-editor" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id1" style="width: 33%">
+<span id="fig-sirius-seff-overview"></span><a class="reference internal image-reference" href="../_images/sirius-seff-overview.png"><img alt="SEFF diagram consisting of a call and a variable setting action." src="../_images/sirius-seff-overview.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Simple SEFF diagram</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The editor consists of a sequence of actions and follows a notation similar to UML activity diagrams. We explain the various actions in the <a class="reference internal" href="#specification-of-actions"><span class="std std-ref">following</span></a>.</p>
+</div>
+<div class="clear-both section" id="specification-of-actions">
+<h2>Specification of Actions<a class="headerlink" href="#specification-of-actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="external-call-action">
+<h3>External Call Action<a class="headerlink" href="#external-call-action" title="Permalink to this headline">¶</a></h3>
+<p>External call actions make calls to required services. When creating such a call, the called component is not know yet because this depends on the actual wiring in the system or assembly diagram. This is beneficial because it decouples components and reduces their interaction to interactions through defined interfaces.</p>
+<p>The effect of a call on quality properties is specified by so called <em class="dfn">variable usages</em>. A variable usage describes how a variable, which can essentially be a parameter or return value, is characterized. The variable is defined by a name shown in the top of the grey rectangles that visualize variable usages. The definition of characteristics shown below the name can refer to other characteristics, which enables the propagation of characteristics through the system.</p>
+<p>Call actions allow to specify two types of variable usages: usages for parameters of the called service (i.e. characterizations of the sent parameters) and usages for the return value of the called service (i.e. characterizations of the received return value). To specify characteristics for a parameter, the variable usages has to have the very same name as the parameter in the signature of the called service. To specify characteristics of the return value, a variable usage with any name can be defined. However, when referring to the characteristics of the particular return value from the called service, the keyword <code class="docutils literal notranslate"><span class="pre">RETURN</span></code> has to be used.</p>
+<p>We explain how to create variable usages for analyzing confidentiality on a <a class="reference internal" href="confidentiality-variableusages.html"><span class="doc">separate page</span></a>.</p>
+</div>
+<div class="section" id="set-variable-action">
+<h3>Set Variable Action<a class="headerlink" href="#set-variable-action" title="Permalink to this headline">¶</a></h3>
+<p>Set variable actions are used to define characteristics of the return value of the provided service. To specify the return value, a variable usage named <code class="docutils literal notranslate"><span class="pre">RETURN</span></code> has to be created and specified. We explain how to create variable usages for analyzing confidentiality on a <a class="reference internal" href="confidentiality-variableusages.html"><span class="doc">separate page</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="sirius-assembly.html" class="btn btn-neutral float-right" title="Usage of Assembly Editor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sirius-repository.html" class="btn btn-neutral float-left" title="Usage of Repository Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Stephan Seifermann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

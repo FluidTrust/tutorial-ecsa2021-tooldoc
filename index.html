@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Documentation of Confidentiality Modeling and Analysis in Palladio &mdash; Palladio Confidentiality 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="First Start" href="first-start.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Palladio Confidentiality
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="first-start.html">First Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modeling/index.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis/index.html">Analysis</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Palladio Confidentiality</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Documentation of Confidentiality Modeling and Analysis in Palladio</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documentation-of-confidentiality-modeling-and-analysis-in-palladio">
+<h1>Documentation of Confidentiality Modeling and Analysis in Palladio<a class="headerlink" href="#documentation-of-confidentiality-modeling-and-analysis-in-palladio" title="Permalink to this headline">¶</a></h1>
+<p>This documentation briefly explains the tooling that can be used to model and analyze confidentiality in software architectures based on Palladio <span id="id1">[<a class="reference internal" href="#id6" title="Ralf H. Reussner, Steffen Becker, Jens Happe, Robert Heinrich, Anne Koziolek, Heiko Koziolek, Max Kramer, and Klaus Krogmann. Modeling and Simulating Software Architectures – The Palladio Approach. MIT Press, Cambridge, MA, October 2016. ISBN 9780262034760. URL: http://mitpress.mit.edu/books/modeling-and-simulating-software-architectures.">RBH+16</a>]</span>.</p>
+<p>The suggested reading path is staring with the <a class="reference internal" href="first-start.html"><span class="doc">First Start</span></a> and deciding how to proceed from there. You may also only use this manual to look up terms or features using the search.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that the manual only covers a part of the overall modeling and analysis approach. Even if the underlying implementation supports all published concepts <span id="id2">[<a class="reference internal" href="#id9" title="Stephan Seifermann, Robert Heinrich, and Ralf H. Reussner. Data-driven software architecture for analyzing confidentiality. In IEEE International Conference on Software Architecture, ICSA 2019, Hamburg, Germany, March 25-29, 2019, 1–10. IEEE, 2019. doi:10.1109/ICSA.2019.00009.">SHR19</a>]</span> <span id="id3">[<a class="reference internal" href="#id10" title="Stephan Seifermann, Robert Heinrich, Dominik Werle, and Ralf H. Reussner. A unified model to detect information flow and access control violations in software architectures. In Sabrina De Capitani di Vimercati and Pierangela Samarati, editors, Proceedings of the 18th International Conference on Security and Cryptography, SECRYPT 2021, July 6-8, 2021, 26–37. SCITEPRESS, 2021. doi:10.5220/0010515300260037.">SHWR21</a>]</span> <span id="id4">[<a class="reference internal" href="#id7" title="Sebastian Hahner, Stephan Seifermann, Robert Heinrich, Maximilian Walter, Tomás Bures, and Petr Hnetynka. Modeling data flow constraints for design-time confidentiality analyses. In 18th IEEE International Conference on Software Architecture Companion, ICSA Companion 2021, Stuttgart, Germany, March 22-26, 2021, 15–21. IEEE, 2021. doi:10.1109/ICSA-C52384.2021.00009.">HSH+21</a>]</span>, the user interface for end-users is not fully implemented yet.</p>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="first-start.html">First Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foundations/index.html">Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modeling/index.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis/index.html">Analysis</a></li>
+</ul>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id5"><dl class="citation">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id4">HSH+21</a></span></dt>
+<dd><p>Sebastian Hahner, Stephan Seifermann, Robert Heinrich, Maximilian Walter, Tomás Bures, and Petr Hnetynka. Modeling data flow constraints for design-time confidentiality analyses. In <em>18th IEEE International Conference on Software Architecture Companion, ICSA Companion 2021, Stuttgart, Germany, March 22-26, 2021</em>, 15–21. IEEE, 2021. <a class="reference external" href="https://doi.org/10.1109/ICSA-C52384.2021.00009">doi:10.1109/ICSA-C52384.2021.00009</a>.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id1">RBH+16</a></span></dt>
+<dd><p>Ralf H. Reussner, Steffen Becker, Jens Happe, Robert Heinrich, Anne Koziolek, Heiko Koziolek, Max Kramer, and Klaus Krogmann. <em>Modeling and Simulating Software Architectures – The Palladio Approach</em>. MIT Press, Cambridge, MA, October 2016. ISBN 9780262034760. URL: <a class="reference external" href="http://mitpress.mit.edu/books/modeling-and-simulating-software-architectures">http://mitpress.mit.edu/books/modeling-and-simulating-software-architectures</a>.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id2">SHR19</a></span></dt>
+<dd><p>Stephan Seifermann, Robert Heinrich, and Ralf H. Reussner. Data-driven software architecture for analyzing confidentiality. In <em>IEEE International Conference on Software Architecture, ICSA 2019, Hamburg, Germany, March 25-29, 2019</em>, 1–10. IEEE, 2019. <a class="reference external" href="https://doi.org/10.1109/ICSA.2019.00009">doi:10.1109/ICSA.2019.00009</a>.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id3">SHWR21</a></span></dt>
+<dd><p>Stephan Seifermann, Robert Heinrich, Dominik Werle, and Ralf H. Reussner. A unified model to detect information flow and access control violations in software architectures. In Sabrina De Capitani di Vimercati and Pierangela Samarati, editors, <em>Proceedings of the 18th International Conference on Security and Cryptography, SECRYPT 2021, July 6-8, 2021</em>, 26–37. SCITEPRESS, 2021. <a class="reference external" href="https://doi.org/10.5220/0010515300260037">doi:10.5220/0010515300260037</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="first-start.html" class="btn btn-neutral float-right" title="First Start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Stephan Seifermann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

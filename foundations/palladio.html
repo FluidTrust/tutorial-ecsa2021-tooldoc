@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Palladio &mdash; Palladio Confidentiality 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Modeling" href="../modeling/index.html" />
+    <link rel="prev" title="Foundations" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Palladio Confidentiality
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../first-start.html">First Start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Foundations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Palladio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#repository-model">Repository Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#system-assembly-model">System / Assembly Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resource-environment">Resource Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#allocation-model">Allocation Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage-model">Usage Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Analysis</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Palladio Confidentiality</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Foundations</a> &raquo;</li>
+        
+      <li>Palladio</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/foundations/palladio.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="palladio">
+<h1>Palladio<a class="headerlink" href="#palladio" title="Permalink to this headline">¶</a></h1>
+<p>Palladio <span id="id1">[<a class="reference internal" href="#id3" title="Ralf H. Reussner, Steffen Becker, Jens Happe, Robert Heinrich, Anne Koziolek, Heiko Koziolek, Max Kramer, and Klaus Krogmann. Modeling and Simulating Software Architectures – The Palladio Approach. MIT Press, Cambridge, MA, October 2016. ISBN 9780262034760. URL: http://mitpress.mit.edu/books/modeling-and-simulating-software-architectures.">RBH+16</a>]</span> is a modeling and analysis approach for component-based software architectures. The modeling is done in collaboration of multiple roles as described in the section about <a class="reference internal" href="#models"><span class="std std-ref">Models</span></a>. <a class="reference internal" href="../analysis/index.html"><span class="doc">Analyses</span></a> are done by quality analysts.</p>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<p>The Palladio approach distinguishes five roles. Four of these roles model system aspects that are required to capture a holistic view on the overall software architecture. <a class="reference internal" href="#fig-palladio-rolesandmodels"><span class="std std-numref">Fig. 2</span></a> illustrates these four roles and the models they create.</p>
+<div class="figure align-default" id="id8">
+<span id="fig-palladio-rolesandmodels"></span><img alt="Visualization of four roles and corresponding models that contribute to a full Palladio architecture model" src="../_images/palladio-roles-and-models.svg" /><p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Roles and models describing a full software architecture according to Palladio</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the following sections, we briefly describe the models and the roles that create these models.</p>
+<div class="section" id="repository-model">
+<h3>Repository Model<a class="headerlink" href="#repository-model" title="Permalink to this headline">¶</a></h3>
+<p>The repository model contains components, interfaces and data types that component developers create. These elements are the building blocks for systems.</p>
+<p>A component always has a clearly defined interface, through which all interactions have to happen. Consequently, the provided services are described through provided interfaces and the required services are described through required interfaces. Because of this clearly defined interface, components can be instantiated and wired as part of systems.</p>
+<p>For every provided service, the components contain a description of how this service is provided within a so called service effect specification (SEFF). The information contained in a SEFF is usually tailored to the particular quality that shall be analyzed.</p>
+</div>
+<div class="section" id="system-assembly-model">
+<h3>System / Assembly Model<a class="headerlink" href="#system-assembly-model" title="Permalink to this headline">¶</a></h3>
+<p>An assembly model consists of a set of wired component instances that provide and require a defined set of services. The component instances are instances of the components specified in the repository model.</p>
+<p>Assembly models can be created by component developers and software architects. If component developers create the assembly model, they typically describe composite components, i.e. components that are made of multiple other components, and place that composite component in the repository model. Software architects typically create a system model, which is just another name for an assembly model, which describes a whole system. A system model is mandatory. Assembly models describing composite components might be used to structure the repository model.</p>
+</div>
+<div class="section" id="resource-environment">
+<h3>Resource Environment<a class="headerlink" href="#resource-environment" title="Permalink to this headline">¶</a></h3>
+<p>A resource environment describes the resources that can be used to deploy the system parts. The resources are essentially computing resources that are connected via network links. Typically the system deployer creates this environment.</p>
+</div>
+<div class="section" id="allocation-model">
+<h3>Allocation Model<a class="headerlink" href="#allocation-model" title="Permalink to this headline">¶</a></h3>
+<p>The allocation model describes how component instances used in the system model are allocated, i.e. deployed, to resources from the resource environment. The system deployer creates this model.</p>
+</div>
+<div class="section" id="usage-model">
+<h3>Usage Model<a class="headerlink" href="#usage-model" title="Permalink to this headline">¶</a></h3>
+<p>The usage model describes how different types of users use the system. A domain expert creates this model by specifying a sequence of usages of system services by user groups.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id2"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">RBH+16</a></span></dt>
+<dd><p>Ralf H. Reussner, Steffen Becker, Jens Happe, Robert Heinrich, Anne Koziolek, Heiko Koziolek, Max Kramer, and Klaus Krogmann. <em>Modeling and Simulating Software Architectures – The Palladio Approach</em>. MIT Press, Cambridge, MA, October 2016. ISBN 9780262034760. URL: <a class="reference external" href="http://mitpress.mit.edu/books/modeling-and-simulating-software-architectures">http://mitpress.mit.edu/books/modeling-and-simulating-software-architectures</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../modeling/index.html" class="btn btn-neutral float-right" title="Modeling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Foundations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Stephan Seifermann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
