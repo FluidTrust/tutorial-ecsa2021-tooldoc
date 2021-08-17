@@ -74,5 +74,6 @@ html_context = {
   'display_github': True,
   'github_user': 'FluidTrust',
   'github_repo': 'tutorial-ecsa2021-tooldoc',
-  'github_version': 'main/source/',
+  'github_version': 'main',
+  'conf_py_path': '/source/'
 }
